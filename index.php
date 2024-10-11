@@ -19,15 +19,16 @@
 
     $nama = "Kahfi";
 
-    echo $_SERVER("DOCUMENT_ROOT");
-    echo "<br>";
-    echo $_SERVER("PHP_SELF");
-    echo "<br>";
-    echo $_SERVER("SERVER_NAME");
-    echo "<br>";
     ?>
     <p>Halo aku <?php echo $nama ?>,Aku belajar</p> 
 
+    <!-- Superglobal variables -->
+    <?php 
+    $_SESSION["nama"] = "Kahfi";
+    $_SESSION["umur"] = 20;
+    echo $_SESSION["nama"];
+    echo $_SESSION["umur"];
+    ?>
 
 </body>
 </html>
