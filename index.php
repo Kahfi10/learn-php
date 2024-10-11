@@ -6,8 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    echo "Hello World!";
+    <!-- variables and data types -->
+     /*
+    <?php 
+    // Scalar types
+    $string = "Kahfi";
+    $int = 10;  
+    $float = 10.5;
+    $bool = true;
+    // Array
+    $array = array("Kahfi", 10, 10.5, true);
+
+    $nama = "Kahfi";
+
+    echo $_SERVER("DOCUMENT_ROOT");
+    echo "<br>";
+    echo $_SERVER("PHP_SELF");
+    echo "<br>";
+    echo $_SERVER("SERVER_NAME");
+    echo "<br>";
     ?>
+    <p>Halo aku <?php echo $nama ?>,Aku belajar</p> 
+
+
 </body>
 </html>
