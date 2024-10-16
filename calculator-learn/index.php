@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+    <form class="container" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         <input type="number" name="num01"
         placeholder="Number One" required>
         <select name="operator" id="">
@@ -21,15 +20,14 @@
         placeholder="Number Two" required>
         <button>Calculate</button>
     </form>
-    </div>
 
     <?php 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // grab data from inputs
         $num01 = filter_input(INPUT_POST, 'num01',
-        FILTER_SANITIZE_NUMBER_FLOAT);
+        FILTER_VALIDATE_FLOAT);
         $num02 = filter_input(INPUT_POST, 'num02',
-        FILTER_SANITIZE_NUMBER_FLOAT);
+        FILTER_VALIDATE_FLOAT);
         $operator = htmlspecialchars($_POST['operator']);
 
         // error handler
