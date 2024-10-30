@@ -31,6 +31,19 @@
     }
 
     echo myFunction2();
+    echo myFunction2();
+    echo myFunction2();
+
+    // class scope
+    echo "<h1>Class Scope</h1>";
+
+    class MyClass {
+        public $classVar = "Ashabul Kahfi";
+
+        public function myMethods() {
+            return $this->classVar;
+        }
+    }
     ?>
 </body>
 </html>
