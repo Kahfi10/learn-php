@@ -10,6 +10,12 @@
     
     define("nama", "Ashabul Kahfi");
     echo nama;
+    echo "<br>";
+
+    function test() {
+        echo nama;
+    }
+    test();
 
     ?>
 </body>
