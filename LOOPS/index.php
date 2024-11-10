@@ -22,6 +22,16 @@
         echo "iterasi " . $test . "<br>";
         $test++;
     }
+
+    echo "<br>";
+    echo "Do While Loop ";
+    echo "<br>";
+
+    $test2 = 5;
+    do {
+        echo "iterasi " . $test2 . "<br>";
+        $test2++;     
+    } while($test2 < 10);
     
     ?>
 </body>
