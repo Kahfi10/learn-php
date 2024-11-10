@@ -32,6 +32,21 @@
         echo "iterasi " . $test2 . "<br>";
         $test2++;     
     } while($test2 < 10);
+
+    echo "<br>";
+    echo "Foreach Loop ";
+    echo "<br>";
+
+    $arr = array("satu", "dua", "tiga");
+    foreach ($arr as $nomor) {
+        echo "ini adalah nomor " . $nomor . "<br>";
+    };
+
+    $nama = array("kahfi" => 19, "ashabul" => 20, "kurniawan" => 21);
+    foreach ($nama as $key => $umur) {
+        echo "ini adalah " . $key . " dan umurnya " . $umur . "<br>";
+    }
+
     
     ?>
 </body>
