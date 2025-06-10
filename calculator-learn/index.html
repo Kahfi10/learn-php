@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+     <form class="container" action="index.php" method="post">
+        <input type="number" name="num01"
+        placeholder="Number One" required>
+        <select name="operator" id="">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+        <input type="number" name="num02"
+        placeholder="Number Two" required>
+        <button class="button">Calculate</button>
+    </form>
+</body>
+</html>
