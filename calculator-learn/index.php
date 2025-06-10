@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form class="container" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
@@ -18,7 +18,7 @@
         </select>
         <input type="number" name="num02"
         placeholder="Number Two" required>
-        <button>Calculate</button>
+        <button class="button">Calculate</button>
     </form>
 
     <?php 
@@ -33,13 +33,8 @@
         // error handler
         $errors = false;
 
-        if (empty($num01) || empty($num02) || empty($operator)) {
-            echo "<p class='error'>All fields are required</p>";
-            $errors = true;
-        }
-
-        if (!is_numeric($num01) || !is_numeric($num02)) {
-            echo "<p class='error'>Both numbers must be numeric</p>";
+        if ($num01 === false || $num02 === false || empty($operator)) {
+            echo "<p class='error'>All fields are required and must be valid numbers</p>";
             $errors = true;
         }
 
@@ -62,8 +57,15 @@
                 break;
             default:
                 echo "<p class='error'>Something are wrong</p>";
+            case "divide":
+                if ($num02 == 0) {
+                    echo "<p class='error'>Cannot divide by zero</p>";
+                    $errors = true;
+                    break;
         }
-        echo "<p class='success'>The result is: $value</p>";
+        if (!$errors) {
+            echo "<p class='success'>The result is: $value</p>";
+        }
     }
 }
     ?>
